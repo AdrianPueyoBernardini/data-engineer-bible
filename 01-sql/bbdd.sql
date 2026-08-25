@@ -1,6 +1,8 @@
 -- ============================================================
 -- BASE DE DATOS DE PRÁCTICA: EXCURSIONES E IBONES DEL PIRINEO
 -- Autor: Adrián | Uso: práctica SQL en PostgreSQL
+-- v2: más registros reales + valores NULL para practicar
+--     (COALESCE, IS NULL / IS NOT NULL, agregaciones con NULL, LEFT JOIN, etc.)
 -- ============================================================
 
 -- Limpieza previa (por si se ejecuta varias veces)
@@ -25,14 +27,16 @@ CREATE TABLE comarcas (
     comarca_id      SERIAL PRIMARY KEY,
     nombre          VARCHAR(50) NOT NULL UNIQUE,
     provincia       VARCHAR(50) NOT NULL DEFAULT 'Huesca',
-    descripcion     TEXT
+    descripcion     TEXT            -- nullable: aún no todas las comarcas están documentadas
 );
 
 INSERT INTO comarcas (nombre, provincia, descripcion) VALUES
-('Valle de Tena', 'Huesca', 'Valle pirenaico famoso por Sallent de Gállego y Panticosa'),
-('Jacetania', 'Huesca', 'Comarca del Pirineo occidental aragonés, capital Jaca'),
-('Sobrarbe', 'Huesca', 'Comarca que alberga el Parque Nacional de Ordesa y Monte Perdido'),
-('Sierra de Guara', 'Huesca', 'Conocida por barrancos y cañones, sur del Pirineo');
+('Valle de Tena',   'Huesca', 'Valle pirenaico famoso por Sallent de Gállego y Panticosa'),
+('Jacetania',       'Huesca', 'Comarca del Pirineo occidental aragonés, capital Jaca'),
+('Sobrarbe',        'Huesca', 'Comarca que alberga el Parque Nacional de Ordesa y Monte Perdido'),
+('Sierra de Guara', 'Huesca', 'Conocida por barrancos y cañones, sur del Pirineo'),
+('Alto Gállego',    'Huesca', 'Comarca pirenaica con capital en Sabiñánigo, incluye Panticosa y Formigal'),
+('Ribagorza',       'Huesca', NULL);   -- descripción pendiente de redactar -> NULL real
 
 -- ============================================================
 -- TABLA: ibones
@@ -43,21 +47,29 @@ CREATE TABLE ibones (
     nombre          VARCHAR(100) NOT NULL,
     comarca_id      INTEGER NOT NULL REFERENCES comarcas(comarca_id),
     altitud_m       INTEGER CHECK (altitud_m > 0),
-    superficie_ha   NUMERIC(6,2),
-    profundidad_m   NUMERIC(5,2)
+    superficie_ha   NUMERIC(6,2),   -- nullable: no siempre hay dato catastral/medido
+    profundidad_m   NUMERIC(5,2)    -- nullable: muchos ibones no tienen batimetría publicada
 );
 
 INSERT INTO ibones (nombre, comarca_id, altitud_m, superficie_ha, profundidad_m) VALUES
-('Ibón de Piedrafita', 1, 1635, 12.50, 12.00),
-('Ibón de Bachimaña', 1, 2237, 6.80, 30.00),
-('Ibón de Respomuso', 1, 2140, 9.40, 30.00),
-('Ibón Azul', 1, 2400, 1.20, 8.00),
-('Ibón de Estanés', 2, 1785, 8.90, 15.50),
-('Ibón d''Anayet', 2, 2227, 2.10, 6.00),
-('Ibón de Ip', 2, 2180, 1.80, 7.20),
-('Ibón de Marboré', 3, 2612, 5.30, 20.00),
-('Ibones de la Munia', 3, 2500, 3.00, 10.00),
-('Ibón de Plan', 3, 1985, 2.40, 5.00);
+-- Valle de Tena / Alto Gállego
+('Ibón de Piedrafita',        1, 1635, 12.50, 12.00),
+('Ibón de Bachimaña',         1, 2237,  6.80, 30.00),
+('Ibón de Respomuso',         1, 2140,  9.40, 30.00),
+('Ibón Azul (Lagos del Infierno)', 1, 2380, 1.20, 8.00),
+('Ibón d''Anayet',            1, 2245,  2.10, NULL),        -- profundidad no publicada
+('Ibón de Sabocos',           1, 2087,  NULL, NULL),        -- superficie y profundidad sin medir
+('Ibón de los Baños de Panticosa', 5, 1630, NULL, 3.50),
+-- Jacetania
+('Ibón de Estanés',           2, 1754,  8.90, 15.50),
+('Ibón de Ip',                2, 1910,  1.80, 7.20),
+('Ibón de Acherito',          2, 1798,  NULL, NULL),        -- ibón occidental, datos limitados
+-- Sobrarbe
+('Ibón de Marboré',           3, 2612,  5.30, 20.00),
+('Ibones de la Munia',        3, 2500,  3.00, 10.00),
+('Ibón de Plan (Basa de la Mora)', 3, 1700, 3.50, 14.00),
+-- Ribagorza
+('Ibón de Billamuerta',       6, 2417,  NULL, NULL);        -- valle de Benasque, sin datos morfométricos públicos
 
 -- ============================================================
 -- TABLA: rutas
@@ -68,26 +80,30 @@ CREATE TABLE rutas (
     nombre              VARCHAR(120) NOT NULL,
     comarca_id          INTEGER NOT NULL REFERENCES comarcas(comarca_id),
     distancia_km        NUMERIC(5,2) NOT NULL CHECK (distancia_km > 0),
-    desnivel_m          INTEGER NOT NULL CHECK (desnivel_m >= 0),
-    duracion_horas      NUMERIC(4,2) NOT NULL,
+    desnivel_m          INTEGER CHECK (desnivel_m >= 0),   -- ahora nullable: no siempre está medido con precisión
+    duracion_horas      NUMERIC(4,2),                       -- ahora nullable: rutas recién añadidas sin cronometrar
     dificultad          nivel_dificultad NOT NULL,
     circular            BOOLEAN NOT NULL DEFAULT false,
-    fecha_publicacion   DATE DEFAULT CURRENT_DATE
+    fecha_publicacion   DATE DEFAULT CURRENT_DATE           -- nullable: borradores aún sin publicar
 );
 
 INSERT INTO rutas (nombre, comarca_id, distancia_km, desnivel_m, duracion_horas, dificultad, circular, fecha_publicacion) VALUES
-('Ruta al Ibón de Piedrafita', 1, 6.50, 350, 3.00, 'facil', true, '2024-06-10'),
-('Circo de Piedrafita - Bachimaña', 1, 14.00, 950, 6.50, 'dificil', true, '2024-07-02'),
-('Ruta a los Ibones de Respomuso', 1, 12.30, 700, 5.50, 'moderada', false, '2024-07-15'),
-('Ascensión al Ibón Azul', 1, 16.00, 1200, 7.00, 'muy_dificil', false, '2024-08-01'),
-('Ruta al Ibón de Estanés', 2, 9.80, 480, 4.00, 'moderada', true, '2024-05-20'),
-('Ruta al Ibón d''Anayet', 2, 10.50, 550, 4.50, 'moderada', false, '2024-06-25'),
-('Vuelta al Ibón de Ip', 2, 8.20, 420, 3.50, 'facil', true, '2024-05-05'),
-('Ruta a Marboré desde Bujaruelo', 3, 18.00, 1400, 8.00, 'muy_dificil', false, '2024-08-10'),
-('Ibones de la Munia por Barrosa', 3, 15.50, 1100, 7.50, 'dificil', false, '2024-08-20'),
-('Ruta fácil al Ibón de Plan', 3, 7.00, 380, 3.20, 'facil', true, '2024-06-15'),
-('Cañón de Añisclo (sin ibón)', 3, 13.00, 600, 5.00, 'moderada', false, '2024-07-30'),
-('Barranco de la Peonera', 4, 5.00, 250, 3.00, 'moderada', false, '2024-05-12');
+('Ruta al Ibón de Piedrafita',            1, 6.50, 350, 3.00, 'facil', true, '2024-06-10'),
+('Circo de Piedrafita - Bachimaña',       1, 14.00, 950, 6.50, 'dificil', true, '2024-07-02'),
+('Ruta a los Ibones de Respomuso',        1, 12.30, 700, 5.50, 'moderada', false, '2024-07-15'),
+('Ascensión al Ibón Azul (Lagos del Infierno)', 1, 16.00, 1200, 7.00, 'muy_dificil', false, '2024-08-01'),
+('Ruta al Ibón d''Anayet desde Formigal', 1, 10.50, 550, 4.50, 'moderada', false, '2024-06-25'),
+('Ruta al Ibón de Sabocos',               1, 9.00, NULL, NULL, 'moderada', true, NULL),                  -- ruta recién trazada, sin publicar aún
+('Paseo al Ibón de los Baños de Panticosa', 5, 4.00, 180, 2.00, 'facil', false, '2024-05-18'),
+('Ruta al Ibón de Estanés',               2, 9.80, 490, 4.00, 'moderada', true, '2024-05-20'),
+('Vuelta al Ibón de Ip',                  2, 8.20, 420, 3.50, 'facil', true, '2024-05-05'),
+('Ruta al Ibón de Acherito desde Guarrinza', 2, 19.00, 700, 6.00, 'dificil', false, '2024-08-18'),
+('Ruta a Marboré desde Bujaruelo',        3, 18.00, 1400, 8.00, 'muy_dificil', false, '2024-08-10'),
+('Ibones de la Munia por Barrosa',        3, 15.50, 1100, 7.50, 'dificil', false, '2024-08-20'),
+('Ruta a la Basa de la Mora (Ibón de Plan)', 3, 7.00, NULL, 3.20, 'facil', true, '2024-06-15'),          -- desnivel pendiente de medir con GPS
+('Cañón de Añisclo (sin ibón)',           3, 13.00, 600, 5.00, 'moderada', false, '2024-07-30'),
+('Barranco de la Peonera',                4, 5.00, 250, 3.00, 'moderada', false, '2024-05-12'),
+('Ibones de Billamuerta desde La Besurta', 6, 11.00, 650, NULL, 'dificil', false, NULL);                 -- borrador, aún sin cronometrar ni publicar
 
 -- ============================================================
 -- TABLA INTERMEDIA: ruta_ibon (relación N:M)
@@ -95,8 +111,8 @@ INSERT INTO rutas (nombre, comarca_id, distancia_km, desnivel_m, duracion_horas,
 -- ============================================================
 
 CREATE TABLE ruta_ibon (
-    ruta_id     INTEGER NOT NULL REFERENCES rutas(ruta_id) ON DELETE CASCADE,
-    ibon_id     INTEGER NOT NULL REFERENCES ibones(ibon_id) ON DELETE CASCADE,
+    ruta_id      INTEGER NOT NULL REFERENCES rutas(ruta_id) ON DELETE CASCADE,
+    ibon_id      INTEGER NOT NULL REFERENCES ibones(ibon_id) ON DELETE CASCADE,
     orden_visita INTEGER DEFAULT 1,
     PRIMARY KEY (ruta_id, ibon_id)
 );
@@ -111,7 +127,11 @@ INSERT INTO ruta_ibon (ruta_id, ibon_id, orden_visita) VALUES
 (7, 7, 1),
 (8, 8, 1),
 (9, 9, 1),
-(10, 10, 1);
+(10, 10, 1),
+(11, 11, 1),
+(12, 12, 1),
+(13, 13, 1),
+(16, 14, 1);
 
 -- ============================================================
 -- TABLA: resenas (para practicar agregaciones y JOINs con datos "de usuarios")
@@ -122,21 +142,26 @@ CREATE TABLE resenas (
     ruta_id         INTEGER NOT NULL REFERENCES rutas(ruta_id) ON DELETE CASCADE,
     autor           VARCHAR(60) NOT NULL,
     puntuacion      SMALLINT NOT NULL CHECK (puntuacion BETWEEN 1 AND 5),
-    comentario      TEXT,
+    comentario      TEXT,           -- nullable: valoraciones solo con nota, sin texto
     fecha_resena    DATE DEFAULT CURRENT_DATE
 );
 
 INSERT INTO resenas (ruta_id, autor, puntuacion, comentario, fecha_resena) VALUES
 (1, 'Marta', 5, 'Ruta ideal para iniciarse, paisaje espectacular', '2024-06-20'),
 (1, 'Javier', 4, 'Muy bonita pero concurrida en agosto', '2024-08-05'),
+(1, 'Ana', 4, NULL, '2024-08-22'),                                        -- solo puntuó, sin comentario
 (2, 'Laura', 5, 'Exigente pero merece muchísimo la pena', '2024-07-10'),
 (3, 'Pablo', 4, 'Buen desnivel, ibones preciosos', '2024-07-22'),
 (4, 'Nuria', 3, 'Muy dura, llevar buen calzado', '2024-08-15'),
-(5, 'Carlos', 5, 'Perfecta para ir con niños', '2024-05-25'),
-(6, 'Elena', 4, 'Vistas increíbles al Anayet', '2024-06-30'),
-(8, 'Sergio', 5, 'La mejor ruta que he hecho en el Pirineo', '2024-08-12'),
-(9, 'Cristina', 4, 'Larga pero muy gratificante', '2024-08-25'),
-(10, 'David', 5, 'Ideal para tarde de verano', '2024-06-18');
+(5, 'Iker', 5, NULL, '2024-07-05'),                                       -- sin comentario
+(7, 'Carlos', 5, 'Perfecta para ir con niños', '2024-05-25'),
+(8, 'Elena', 4, 'Vistas increíbles al Estanés', '2024-06-30'),
+(9, 'Diego', 3, NULL, NULL),                                              -- ni comentario ni fecha (reseña importada sin metadatos)
+(11, 'Sergio', 5, 'La mejor ruta que he hecho en el Pirineo', '2024-08-12'),
+(12, 'Cristina', 4, 'Larga pero muy gratificante', '2024-08-25'),
+(13, 'David', 5, 'Ideal para tarde de verano', '2024-06-18'),
+(15, 'Marcos', 4, 'Cañones espectaculares aunque hay que reservar', '2024-08-02');
+-- Nota: las rutas 6, 10, 14 y 16 se dejan sin reseñas a propósito -> practicar LEFT JOIN / rutas sin valorar
 
 -- ============================================================
 -- ÍNDICES ÚTILES
@@ -179,3 +204,23 @@ CREATE INDEX idx_resenas_ruta ON resenas(ruta_id);
 -- SELECT nombre, comarca_id, desnivel_m,
 --        RANK() OVER (PARTITION BY comarca_id ORDER BY desnivel_m DESC) AS ranking
 -- FROM rutas;
+
+-- ============================================================
+-- CONSULTAS PARA PRACTICAR NULOS ESPECÍFICAMENTE
+-- ============================================================
+
+-- 7. Rutas sin reseñas todavía (LEFT JOIN + IS NULL)
+-- SELECT r.nombre
+-- FROM rutas r LEFT JOIN resenas res ON r.ruta_id = res.ruta_id
+-- WHERE res.resena_id IS NULL;
+
+-- 8. Ibones sin dato de profundidad, sustituyendo con COALESCE
+-- SELECT nombre, COALESCE(profundidad_m::TEXT, 'sin datos') AS profundidad
+-- FROM ibones;
+
+-- 9. Cuidado: AVG/SUM ignoran los NULL, pero COUNT(*) no
+-- SELECT COUNT(*) AS total_rutas, COUNT(desnivel_m) AS rutas_con_desnivel
+-- FROM rutas;
+
+-- 10. Rutas sin fecha de publicación (borradores)
+-- SELECT nombre FROM rutas WHERE fecha_publicacion IS NULL;

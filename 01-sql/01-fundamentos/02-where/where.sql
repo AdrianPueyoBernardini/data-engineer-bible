@@ -11,9 +11,14 @@ WHERE circular = true;
 SELECT nombre, distancia_km, desnivel_m, dificultad
 FROM rutas
 WHERE dificultad = 'dificil'
-OR dificultad = 'muy_dificil';   
+OR dificultad = 'muy_dificil';
 
---2.3 WHERE + AND: multi condicion "y"
+--2.3 WHERE + IN: Multicondición "o" más limpia
+SELECT nombre, dificultad 
+FROM rutas
+WHERE dificultad IN ('dificil', 'muy_dificil');
+
+--2.4 WHERE + AND: multi condicion "y"
 SELECT nombre, distancia_km, dificultad
 FROM rutas
 WHERE distancia_km > 15
