@@ -4,37 +4,38 @@
 
 ## 🗂️ Estructura
 
-├── 01-fundamentals/  
-│   ├── select/  
-│   ├── where/  
-│   ├──  
-│   └──  
-├── 02-conditions/  
+├── 01-fundamentos/  
+│   ├── select/   
+│   ├── where/    
+│   ├── distinct/  
+│   ├── limit-offset/   
+│   └── nulls  
+├── 02-condiciones-y-filtros/  
+│   ├── operaciones-comparacion/   
+│   ├── operadores-logicos   
+│   ├── like  
+│   └── case  
+├── 03-agregaciones/  
 │   ├──   
 │   ├──   
 │   ├──   
-│   └──  
-├── 03-agregations/  
-│   ├──   
-│   ├──   
-│   ├──   
-│   └──  
+│   └──   
 ├── 04-joins/  
 │   ├──   
 │   ├──   
 │   ├──   
 │   └──  
-├── 05-advanced/  
+├── 05-avanzado/  
+│   ├──   
+│   ├──   
+│   ├──   
+│   └──   
+├── 06-gestion-de-bbdd/  
 │   ├──   
 │   ├──   
 │   ├──   
 │   └──  
-├── 06-ddbb-management/  
-│   ├──   
-│   ├──   
-│   ├──   
-│   └──  
-├── 07-users-and-roles/  
+├── 07-usuarios-y-roles/  
 │   ├──   
 │   ├──   
 │   ├──   

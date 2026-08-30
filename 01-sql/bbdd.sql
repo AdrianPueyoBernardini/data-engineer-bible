@@ -164,6 +164,76 @@ INSERT INTO resenas (ruta_id, autor, puntuacion, comentario, fecha_resena) VALUE
 -- Nota: las rutas 6, 10, 14 y 16 se dejan sin reseñas a propósito -> practicar LEFT JOIN / rutas sin valorar
 
 -- ============================================================
+-- MÁS RESEÑAS: para practicar GROUP BY / HAVING con volumen real
+-- (varios usuarios distintos opinando sobre las mismas rutas)
+-- ============================================================
+
+INSERT INTO resenas (ruta_id, autor, puntuacion, comentario, fecha_resena) VALUES
+-- Ruta 1: Ruta al Ibón de Piedrafita (ya tenía 3 -> la dejamos como la más "popular")
+(1, 'Sara', 5, 'Perfecta para un domingo con la familia', '2024-06-28'),
+(1, 'Rubén', 3, 'Bien pero muy llena de gente en verano', '2024-07-14'),
+(1, 'Lucía', 5, NULL, '2024-08-01'),
+(1, 'Hugo', 4, 'Fácil y con vistas muy bonitas', '2024-09-02'),
+(1, 'Paula', 5, 'La recomiendo para iniciarse en senderismo', '2025-06-10'),
+
+-- Ruta 2: Circo de Piedrafita - Bachimaña
+(2, 'Marcos', 4, 'Dura pero el circo glaciar merece la pena', '2024-07-20'),
+(2, 'Alba', 5, 'La mejor ruta que he hecho este año', '2024-08-11'),
+(2, 'Iván', 3, NULL, '2024-08-25'),
+(2, 'Noelia', 4, 'Larga, llevar buen calzado y agua', '2025-07-05'),
+
+-- Ruta 3: Ruta a los Ibones de Respomuso
+(3, 'Raquel', 5, 'Ibones espectaculares, muy recomendable', '2024-07-30'),
+(3, 'Óscar', 4, NULL, '2024-08-09'),
+(3, 'Beatriz', 4, 'Buen desnivel, apta para nivel medio', '2025-06-22'),
+
+-- Ruta 4: Ascensión al Ibón Azul
+(4, 'Fernando', 2, 'Se me hizo demasiado dura, cuidado con el desnivel', '2024-08-16'),
+(4, 'Cristina', 4, 'Exigente pero espectacular arriba', '2024-08-30'),
+(4, 'Adrián', 5, NULL, '2025-07-19'),
+
+-- Ruta 5: Ruta al Ibón d'Anayet desde Formigal
+(5, 'Teresa', 5, 'El pico Anayet reflejado en el agua es una pasada', '2024-07-02'),
+(5, 'Gonzalo', 4, 'Ruta muy fotogénica', '2024-08-14'),
+(5, 'Marina', 3, NULL, '2025-06-28'),
+
+-- Ruta 7: Paseo al Ibón de los Baños de Panticosa
+(7, 'Andrea', 5, 'Ideal para ir con niños pequeños', '2024-06-05'),
+(7, 'Jorge', 4, 'Corta y tranquila, muy accesible', '2024-07-22'),
+(7, 'Silvia', 5, NULL, '2025-05-30'),
+(7, 'Pau', 3, 'Se llena mucho en agosto', '2025-08-01'),
+
+-- Ruta 8: Ruta al Ibón de Estanés
+(8, 'Miguel', 5, 'Frontera con Francia, paisaje único', '2024-07-08'),
+(8, 'Claudia', 4, NULL, '2024-08-19'),
+(8, 'Xavier', 4, 'Muy transitada pero bonita', '2025-06-15'),
+
+-- Ruta 9: Vuelta al Ibón de Ip
+(9, 'Nerea', 5, 'Ruta corta y muy agradecida', '2024-06-12'),
+(9, 'Álvaro', 3, NULL, '2024-08-03'),
+(9, 'Yolanda', 4, 'Buena opción para tarde de verano', '2025-07-11'),
+
+-- Ruta 11: Ruta a Marboré desde Bujaruelo
+(11, 'Ricardo', 5, 'Increíble, de las mejores de Ordesa', '2024-08-22'),
+(11, 'Patricia', 4, 'Muy larga, salir temprano', '2024-09-01'),
+(11, 'Enrique', 5, NULL, '2025-07-28'),
+
+-- Ruta 12: Ibones de la Munia por Barrosa
+(12, 'Victoria', 4, 'Exigente pero con paisajes de alta montaña', '2024-08-27'),
+(12, 'Damián', 5, NULL, '2025-08-05'),
+
+-- Ruta 13: Ruta a la Basa de la Mora (Ibón de Plan)
+(13, 'Isabel', 5, 'Preciosa y tranquila, poco masificada', '2024-06-25'),
+(13, 'Tomás', 4, 'Fácil de hacer en familia', '2025-06-30'),
+(13, 'Celia', 3, NULL, '2025-08-10'),
+
+-- Ruta 15: Barranco de la Peonera
+(15, 'Julián', 4, 'Divertido, buena opción de barranco fácil', '2024-05-30'),
+(15, 'Rosa', 5, NULL, '2025-07-02');
+-- Nota: rutas 6, 10, 14 y 16 se mantienen SIN reseñas a propósito
+-- (borradores/sin publicar) -> siguen sirviendo para practicar HAVING COUNT(*) = 0 vía LEFT JOIN
+
+-- ============================================================
 -- ÍNDICES ÚTILES
 -- ============================================================
 
