@@ -6,7 +6,7 @@ Repositorio personal de apuntes, chuletas (*cheatsheets*) y ejercicios para cons
 
 ## 🗂️ Estructura del repositorio
 
-.
+
 ├── 00-almacenamiento/  
 │   └── almacenamiento.md          **--> Tipos de almacenes de datos**  
 ├── 01-sql/  
