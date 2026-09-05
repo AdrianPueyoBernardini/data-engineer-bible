@@ -17,7 +17,10 @@ Repositorio personal de apuntes, chuletas (*cheatsheets*) y ejercicios para cons
 │   ├── 06-gestion-de-bbdd/  
 │   ├── 07-usuarios-y-roles/  
 │   ├── bbdd.sql      
-│   └── sql.md  
+│   └── sql.md 
+├── 02-python/
+│   ├── 01-fundamentos/     
+│   └──     
 ├──README.md  
 
 
@@ -26,7 +29,7 @@ Repositorio personal de apuntes, chuletas (*cheatsheets*) y ejercicios para cons
 
 | Categoría       | Herramientas |
 |-----------------|--------------|
-| Lenguajes       |  SQL |
+| Lenguajes       |  SQL, Python |
 | Cloud           | 🛠️ |
 | Procesamiento   | 🛠️ |
 | Almacenamiento  | 🛠️ |
