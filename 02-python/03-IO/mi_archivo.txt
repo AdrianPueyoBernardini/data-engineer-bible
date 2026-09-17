@@ -1,0 +1,3 @@
+Aquí podemos poner las lineas que queremos
+tantas como sean
+se grabarán en el txt
