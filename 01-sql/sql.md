@@ -4,37 +4,39 @@
 
 ## 🗂️ Estructura
 
-├── 01-fundamentals/  
-│   ├── select/  
-│   ├── where/  
-│   ├──  
-│   └──  
-├── 02-conditions/  
+├── 01-fundamentos/  
+│   ├── select/   
+│   ├── where/    
+│   ├── distinct/  
+│   ├── limit-offset/  
+│   ├── nulls/    
+│   └── date-functions/  
+├── 02-condiciones-y-filtros/  
+│   ├── operaciones-comparacion/   
+│   ├── operadores-logicos   
+│   ├── like  
+│   └── case  
+├── 03-agregaciones/  
+│   ├── funciones-agregacion   
 │   ├──   
 │   ├──   
-│   ├──   
-│   └──  
-├── 03-agregations/  
-│   ├──   
-│   ├──   
-│   ├──   
-│   └──  
+│   └──   
 ├── 04-joins/  
+│   ├── inner-join   
+│   ├── left-right-join   
+│   ├──   
+│   └──  
+├── 05-avanzado/  
+│   ├── subconsultas   
+│   ├── ctes   
+│   ├──   
+│   └──   
+├── 06-gestion-de-bbdd/  
 │   ├──   
 │   ├──   
 │   ├──   
 │   └──  
-├── 05-advanced/  
-│   ├──   
-│   ├──   
-│   ├──   
-│   └──  
-├── 06-ddbb-management/  
-│   ├──   
-│   ├──   
-│   ├──   
-│   └──  
-├── 07-users-and-roles/  
+├── 07-usuarios-y-roles/  
 │   ├──   
 │   ├──   
 │   ├──   

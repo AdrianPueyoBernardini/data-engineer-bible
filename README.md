@@ -6,7 +6,22 @@ Repositorio personal de apuntes, chuletas (*cheatsheets*) y ejercicios para cons
 
 ## 🗂️ Estructura del repositorio
 
-🛠️En proceso...
+
+├── 00-almacenamiento/  
+│   └── almacenamiento.md          **--> Tipos de almacenes de datos**  
+├── 01-sql/  
+│   ├── 01-fundamentos/    
+│   ├── 02-condiciones-y-filtros/  
+│   ├── 03-agregaciones/  
+│   ├── 04-joins/  
+│   ├── 05-subconsultas-y-ctes/  
+│   ├── 06-gestion-de-bbdd/  
+│   ├── 07-usuarios-y-roles/  
+│   ├── bbdd.sql  
+│   └── sql.md  
+├── 02-python/  
+│   └── 01-fundamentos/  
+└── README.md  
 
 
 
@@ -14,7 +29,7 @@ Repositorio personal de apuntes, chuletas (*cheatsheets*) y ejercicios para cons
 
 | Categoría       | Herramientas |
 |-----------------|--------------|
-| Lenguajes       |  SQL |
+| Lenguajes       |  SQL, Python |
 | Cloud           | 🛠️ |
 | Procesamiento   | 🛠️ |
 | Almacenamiento  | 🛠️ |
