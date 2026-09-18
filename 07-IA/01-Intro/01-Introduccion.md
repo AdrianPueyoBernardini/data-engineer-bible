@@ -1,7 +1,7 @@
-# IA
+# Introducción
 
 ## 🗂️ ¿Qué es el aprendizaje automático o Machine Learning?
-Es el proceso de entrenar un modelo para que realice *preciciones* útiles o *genere contenido*.
+Es el proceso de entrenar un modelo para que realice *predicciones* útiles o *genere contenido*.
 
 **Vamos con un ejemplo:**   
 Queremos crear una aplicación de precicción de tiempo, para ello, necesitaríamos evaluar una gran cantidad de fórmulas, parámetros y física para poder llegar a predecirlo de una forma razonable.
@@ -33,7 +33,7 @@ La clasificación multiclase general un valor concreto a partir de una clase con
 Los modelos de aprendizaje no supervisado busca como objetivo identificar patrones significativos en los conjuntos de datos que se le entregan.   
 Muchos modelos se basan en la técnica de agrupamiento.
 
-![no-supervisado](../images/no-supervisado.png)
+![no-supervisado](../../images/no-supervisado.png)
 
 La técnica de agrupamiento difiere de la de clasificación porque el modelo no selecciona a que grupo pertenece, solo identifica el patrón y nosotros lo renombramos según nuestra comprensión.
 
@@ -42,7 +42,8 @@ Los modelos que utilizan el apredizaje por refuerzo realizan predicciones obteni
 Uno de los ejemplos de uso es el entrenamiento de robots. 
 
 #### 4. IA generativa
-La IA generativa CREA contenido a diferencia de las anteriores vistas.   
+La IA generativa CREA contenido a diferencia de las anteriores vistas.  
+ 
 *Recordemos:*   
 La supervisada, mediante fallos y aciertos ya comprobados aprende(regresion y clasificacion).  
 La no supervisada, detecta patrones normalmente mediante agrupación que luego nosotros categorizamos.   
@@ -59,10 +60,23 @@ Toma una variedad de entradas y salidas y según ellas podemos clasificarlas:
 
 -**Texto a imagen:** Tras una entrada de texto nos da una salida en este caso de img.   
 *Por ejemplo*, Quiero un pulpo alienigena que flota leyendo el periódico
->![no-supervisado](../images/generativa-texto-imagen.png)
+>![no-supervisado](../../images/generativa-texto-imagen.png)
 
 
 -**Texto a video:** Con una entrada de texto nos entrega un video.   
 *Por ejemplo*, un oso de peluche fotorrealista nada en el océano en San Francisco. El oso de peluche se sumerge en el agua. El oso de peluche sigue nadando bajo el agua con peces coloridos. Un oso panda nada bajo el agua.
->![no-supervisado](../images/teddy_bear.gif)
+>![no-supervisado](../../images/teddy_bear.gif)
 
+-**Texto a código:** Tras una entrada de texto nos entrega código.     
+*Por ejemplo*, Escribe un bucle de Python que itere sobre una lista de números y muestre los números primos.
+>for number in numbers:
+  is_prime = True   
+  for i in range(2, number):   
+    if number % i == 0:   
+        is_prime = False   
+        break   
+  if is_prime:   
+    print(number)   
+
+-**Imagen a texto:** Tras una entrada de imagen nos entrega texto.   
+ 
