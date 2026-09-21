@@ -3,7 +3,7 @@
 En los modelos de aprendizaje supervisado se le otorgan respuestas correctas e incorrectas para aprender y descubrir las conexiones entre los elementos.
 ## 🗂️ Regresion lineal
 La regresión lineal es una técnica estadística que se usa para encontrar la relación entre las variables. Encuentran la relación entre las variables y las etiquetas.   
-![no-supervisado](../../images/regresion-lineal.png)
+![no-supervisado](../../../images/regresion-lineal.png)
 
 ## 🗂️ Regresion lineal: Pérdida
 La perdida es una métrica que mide la distancia que hay entre las predicciones del modelo y la respuestas certeras.   
@@ -25,13 +25,31 @@ Entre los principales tipos de pérdida tenemos:
 
 >MAE    
 Si quieremos penalizar menos los errores. Está más lejos de los valores atípicos pero más cerca de la mayoría de otros puntos de datos.   
-![no-supervisado](../../images/regresion-lineal-a.png)   
+![no-supervisado](../../../images/regresion-lineal-a.png)   
 
 ---   
 
 >ECM    
 Si queremos pnalizar más los errores. El modelo está más cerca de los valores atípicos pero más lejos de los otros puntos de datos.
-![no-supervisado](../../images/regresion-lineal-b.png)  
+![no-supervisado](../../../images/regresion-lineal-b.png)  
 
 
-## 🗂️ ¿Cómo elegimos correctamente una función de pérdida?
+## 🗂️ ¿Qué son los hiperparámetros?
+Los hiperparametros son variables que controlan aspectos del entrenamiento.   
+Tres de los más comunes son:   
+>-->Tasa de aprendizaje   
+>-->Tamaño del lote   
+>-->Ciclo de entrenamiento   
+
+-**Tasa de aprendizaje:** Flotante que influye en la velocidad en la que converge el modelo. Tasas bajas hacen que el modelo tarde demasiado en converger (llegar a los parámetros deseados). Por el contrario si la tasa es demasiado alta el modelo nunca converge. El objetivo es encontrar un punto medio.  
+
+-**Tamaño del lote:** Es la cantidad de ejemplos que el modelo sopesa antes de actualizar los sesgos y pesos. En modelos con gran cantidad de datos, no es práctico evaluar todo el lote de vez (podemos llegar a tener millones de datos).   
+Dos técnicas que se utilizan para obtener el gradiente correcto es son:    
+***-->Descenso de gradientes estocástico(SGD):***   
+Usa un solo ejemplo por iteración, funciona pero da una sensación de sierra.   
+![no-supervisado](../../../images/regresion-lineal-descenso-estocastico.png)    
+***-->Descenso de gradientes estocástico de minilote(SGD de minilote):***    
+Es un punto medio entre el lote completo de datos y el SGD, veremos que al evaluar más datos sigue apareciendo la sierra pero mucho menos pronunciada.
+![no-supervisado](../../../images/regresion-lineal-descenso-estocastico-mini.png)
+
+-**Ciclo de entrenamiento:** Son las veces que el modelo itera para llegar a procesar los datos. Por ejemplo, un modelo que tiene 1000 datos y se procesan en minilotes de 100, requerirá de 10 ciclos.
