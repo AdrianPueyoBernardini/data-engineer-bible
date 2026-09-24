@@ -39,4 +39,6 @@ Repositorio personal de apuntes, chuletas (*cheatsheets*) y ejercicios para cons
 
 ## 📌 Notas
 
-Este repositorio es un documento **vivo**: se actualiza continuamente a medida que avanzo en el aprendizaje y encuentro nuevos casos prácticos en el día a día profesional.
+Este repositorio es un documento **vivo**: se actualiza continuamente a medida que avanzo en el aprendizaje y encuentro nuevos casos prácticos en el día a día profesional.   
+Para este curso se han seguido bastantes pautas el temario de:   
+***https://developers.google.com/machine-learning?hl=es-419***

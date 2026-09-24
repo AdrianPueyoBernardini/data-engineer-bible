@@ -14,3 +14,5 @@ Las técnicas más utilizadas dentro de la ingeniería de atributos son:
 Es importante encontrar valores atípicos ya que tienden a causar problemas a la hora de entrenar modelos.   
 
 Cuando la diferencia entre el percentil 0 y el 25 difiere significativamente de la diferencia entre el percentil 75 y el 100, es probable que el conjunto de datos contenga valores atípicos.
+
+
