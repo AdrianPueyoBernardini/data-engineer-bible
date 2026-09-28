@@ -1,0 +1,3 @@
+socio S-1
+id P05
+id P99

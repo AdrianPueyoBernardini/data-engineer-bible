@@ -1,0 +1,5 @@
+catalogo_a.json
+no_existe.json
+catalogo_roto.json
+vacio.json
+catalogo_b.json

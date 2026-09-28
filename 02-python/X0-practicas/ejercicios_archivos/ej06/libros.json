@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "titulo": "Cien años de soledad",
+    "autor": "Gabriel García Márquez",
+    "anio": 1967,
+    "ejemplares": 5
+  },
+  {
+    "id": 2,
+    "titulo": "El nombre de la rosa, edición anotada",
+    "autor": "Umberto Eco",
+    "anio": 1980,
+    "ejemplares": 3
+  },
+  {
+    "id": 3,
+    "titulo": "La sombra del viento",
+    "autor": "Carlos Ruiz Zafón",
+    "anio": 2001,
+    "ejemplares": 4
+  },
+  {
+    "id": 4,
+    "titulo": "Rayuela",
+    "autor": "Julio Cortázar",
+    "anio": 1963,
+    "ejemplares": 2
+  },
+  {
+    "id": 5,
+    "titulo": "Pedro Páramo",
+    "autor": "Juan Rulfo",
+    "anio": 1955,
+    "ejemplares": 1
+  },
+  {
+    "id": 6,
+    "titulo": "Ficciones",
+    "autor": "Jorge Luis Borges",
+    "anio": 1944,
+    "ejemplares": 6
+  },
+  {
+    "id": 7,
+    "titulo": "Los santos inocentes",
+    "autor": "Miguel Delibes",
+    "anio": 1981,
+    "ejemplares": 3
+  },
+  {
+    "id": 8,
+    "titulo": "Niebla",
+    "autor": "Miguel de Unamuno",
+    "anio": 1914,
+    "ejemplares": 2
+  }
+]

@@ -1,0 +1,6 @@
+id 3
+autor Umberto Eco
+id 99
+autor Miguel de Unamuno
+autor Nadie Conocido
+id 6
