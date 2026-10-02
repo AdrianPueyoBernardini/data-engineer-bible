@@ -18,8 +18,12 @@ def crear_carpetas():
     if(not os.path.exists(ruta/"archivo")):
         os.mkdir(ruta/"archivo")
 
-    #Con shutil podemos copiar todo el arbol de archuvos de la ruta.
+    #Con shutil podemos copiar todo el arbol de archivos de la ruta.
     shutil.copytree(ruta_muestras, ruta_archivo, dirs_exist_ok=True)
 
+    
+
+   
+    
 
 crear_carpetas()
