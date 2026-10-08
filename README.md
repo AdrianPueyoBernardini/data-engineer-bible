@@ -5,10 +5,10 @@ Repositorio personal de apuntes, chuletas (*cheatsheets*) y ejercicios para cons
 > 🎯 Objetivo: tener un único lugar de referencia rápida para consultar sintaxis, patrones y buenas prácticas antes/durante el día a día profesional.
 
 ![Estado](https://img.shields.io/badge/estado-en%20construcción-orange)
-![Idioma](https://img.shields.io/badge/idioma-español-blue)
-![Foco](https://img.shields.io/badge/foco-SQL%20%C2%B7%20Python%20%C2%B7%20AWS%20%C2%B7%20IA-green)
+![Idioma](https://img.shields.io/badge/idioma-español-green)
+![Foco](https://img.shields.io/badge/foco-Python%20%C2%B7%20SQL%20%C2%B7%20AWS%20%C2%B7%20IA-blue)
 
-## 🗂️ Estructura del repositorio
+## 🗂️ Estructura del repositorio (en desarrollo)
 
 ```text
 data-engineer-bible/
@@ -23,17 +23,15 @@ data-engineer-bible/
     └── 04-ml-clasico/
 ```
 
-
-
 ---
 
-## 🧰 Stack cubierto
+## 🧰 Stack cubierto (en desarrollo)
 
 | Categoría | Herramientas |
 | --- | --- |
-| **Lenguajes** | SQL, Python |
+| **Lenguajes** | Python(Jupyter & Vanilla), SQL |
 | **Librerías de datos / ML** | NumPy, pandas, scikit-learn, matplotlib, TensorFlow |
-| **Cloud** | AWS (Cloud Practitioner como base), Amazon SageMaker |
+| **Cloud** | AWS, Amazon SageMaker |
 | **Plataforma de datos** | Databricks, Delta Lake |
 | **Arquitectura** | Data Lake, Lakehouse, ETL/ELT, Bronze/Silver/Gold |
 | **Transformación y orquestación** | dbt, orquestadores |
