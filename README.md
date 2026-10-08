@@ -6,7 +6,7 @@ Repositorio personal de apuntes, chuletas (*cheatsheets*) y ejercicios para cons
 
 ![Estado](https://img.shields.io/badge/estado-en%20construcción-orange)
 ![Idioma](https://img.shields.io/badge/idioma-español-green)
-![Foco](https://img.shields.io/badge/foco-Python%20%C2%B7%20SQL%20%C2%B7%20AWS%20%C2%B7%20IA-blue)
+![Stack](https://img.shields.io/badge/foco-Python%20%C2%B7%20SQL%20%C2%B7%20AWS%20%C2%B7%20IA-blue)
 
 ## 🗂️ Estructura del repositorio (en desarrollo)
 
