@@ -30,11 +30,18 @@ def validar_ruta(fila):
         distancia = float(limpio["distancia_km"].replace(",", "."))
     except ValueError:
         return None, f"TIPO_INCORRECTO: distancia_km = '{limpio['distancia_km']}'"
+    
+    desnivel_texto = limpio["desnivel_m"]
 
-    try:
-        desnivel = int(limpio["desnivel_m"])  # int("12,5") falla: no es un entero
-    except ValueError:
-        return None, f"TIPO_INCORRECTO: desnivel_m = '{limpio['desnivel_m']}'"
+    if desnivel_texto == "—":
+        desnivel = None
+    else:
+        try:
+            desnivel = int(desnivel_texto)
+        except ValueError:
+            return None, (
+                f"TIPO_INCORRECTO: desnivel_m = '{desnivel_texto}'"
+            )
 
     # FASE 3: rangos y valores admitidos.
     if not math.isfinite(distancia) or distancia <= 0:  # float acepta "nan" e "inf"

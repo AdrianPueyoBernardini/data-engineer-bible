@@ -1,6 +1,11 @@
 import csv
 import json
+from pathlib import Path
 
+DIRECTORIO_PADRE = Path(__file__).resolve().parent.parent
+
+RUTA_CSV = DIRECTORIO_PADRE / "entrada" / "rutas.csv"
+RUTA_JSON = DIRECTORIO_PADRE / "entrada" / "planes.json"
 MAX_JSON_BYTES = 1_000_000  # Máximo: 1 MB
 
 
