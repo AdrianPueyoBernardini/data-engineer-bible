@@ -191,10 +191,11 @@ def ejecutar_importacion():
         OSError,
         UnicodeError,
         csv.Error,
-        json.JSONDecodeError,
+        KeyError,
+        TypeError,
         ValueError
     ) as error:
-        print(f"ERROR DE LECTURA: {error}")
+        print(f"ERROR DE LECTURA O PROCESAMIENTO: {error}")
         print("No se ha guardado una nueva importación.")
         return
 
