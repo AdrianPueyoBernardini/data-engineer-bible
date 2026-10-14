@@ -1,0 +1,368 @@
+{
+  "rutas": {
+    "archivo": "rutas.csv",
+    "procesados": 48,
+    "nuevos": 0,
+    "duplicados": 42,
+    "conflictos": 0,
+    "rechazados": 6
+  },
+  "planes": {
+    "archivo": "planes.json",
+    "procesados": 10,
+    "nuevos": 0,
+    "duplicados": 8,
+    "conflictos": 0,
+    "rechazados": 2
+  },
+  "incidencias": [
+    {
+      "archivo": "rutas.csv",
+      "registro": 1,
+      "clave": "R01",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 2,
+      "clave": "R02",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 3,
+      "clave": "R03",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 4,
+      "clave": "R04",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 5,
+      "clave": "R05",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 6,
+      "clave": "R06",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 7,
+      "clave": "R07",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 8,
+      "clave": "R08",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 9,
+      "clave": "R09",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 10,
+      "clave": "R10",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 11,
+      "clave": "R11",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 12,
+      "clave": "R12",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 13,
+      "clave": "R13",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 14,
+      "clave": "R14",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 15,
+      "clave": "R15",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 16,
+      "clave": "R16",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 17,
+      "clave": "R17",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 18,
+      "clave": "R18",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 19,
+      "clave": "R19",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 20,
+      "clave": "R20",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 21,
+      "clave": "R21",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 22,
+      "clave": "R22",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 23,
+      "clave": "R23",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 24,
+      "clave": "R24",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 25,
+      "clave": "R25",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 26,
+      "clave": "R26",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 27,
+      "clave": "R27",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 28,
+      "clave": "R28",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 29,
+      "clave": "R29",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 30,
+      "clave": "R30",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 31,
+      "clave": "R31",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 32,
+      "clave": "R32",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 33,
+      "clave": "R33",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 34,
+      "clave": "R34",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 35,
+      "clave": "R35",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 36,
+      "clave": "R36",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 37,
+      "clave": "R37",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 38,
+      "clave": "R38",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 39,
+      "clave": "R39",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 40,
+      "clave": "R40",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 41,
+      "clave": "R41",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 42,
+      "clave": "R42",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 43,
+      "clave": "R43",
+      "motivo": "TIPO_INCORRECTO: desnivel_m = '—'"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 44,
+      "clave": "R44",
+      "motivo": "TIPO_INCORRECTO: desnivel_m = '—'"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 45,
+      "clave": "R45",
+      "motivo": "TIPO_INCORRECTO: desnivel_m = '—'"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 46,
+      "clave": "R46",
+      "motivo": "TIPO_INCORRECTO: desnivel_m = '—'"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 47,
+      "clave": "R47",
+      "motivo": "TIPO_INCORRECTO: desnivel_m = '—'"
+    },
+    {
+      "archivo": "rutas.csv",
+      "registro": 48,
+      "clave": "R48",
+      "motivo": "TIPO_INCORRECTO: desnivel_m = '—'"
+    },
+    {
+      "archivo": "planes.json",
+      "registro": 1,
+      "clave": "P01",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "planes.json",
+      "registro": 2,
+      "clave": "P02",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "planes.json",
+      "registro": 3,
+      "clave": "P03",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "planes.json",
+      "registro": 4,
+      "clave": "P04",
+      "motivo": "FECHAS_INCOHERENTES: fecha_fin es anterior a fecha_inicio"
+    },
+    {
+      "archivo": "planes.json",
+      "registro": 5,
+      "clave": "P05",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "planes.json",
+      "registro": 6,
+      "clave": "P06",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "planes.json",
+      "registro": 7,
+      "clave": "P07",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "planes.json",
+      "registro": 8,
+      "clave": "P08",
+      "motivo": "FECHA_INVALIDA: fecha_inicio no es una fecha real"
+    },
+    {
+      "archivo": "planes.json",
+      "registro": 9,
+      "clave": "P09",
+      "motivo": "DUPLICADO_IDENTICO"
+    },
+    {
+      "archivo": "planes.json",
+      "registro": 10,
+      "clave": "P10",
+      "motivo": "DUPLICADO_IDENTICO"
+    }
+  ]
+}

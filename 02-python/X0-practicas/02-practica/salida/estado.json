@@ -1,0 +1,398 @@
+{
+  "rutas": [
+    {
+      "id_ruta": "R01",
+      "ruta": "Pradera de Ordesa - Cola de Caballo",
+      "distancia_km": 17.5,
+      "desnivel_m": 500,
+      "valle": "Valle de Ordesa",
+      "dificultad": "difícil"
+    },
+    {
+      "id_ruta": "R02",
+      "ruta": "Pradera de Ordesa - Senda de Cazadores - Faja de Pelay - Cola de Caballo",
+      "distancia_km": 20.1,
+      "desnivel_m": 890,
+      "valle": "Valle de Ordesa",
+      "dificultad": "difícil"
+    },
+    {
+      "id_ruta": "R03",
+      "ruta": "San Nicolás de Bujaruelo - Valle de Otal",
+      "distancia_km": 13.5,
+      "desnivel_m": 315,
+      "valle": "Valle de Ordesa",
+      "dificultad": "moderada"
+    },
+    {
+      "id_ruta": "R04",
+      "ruta": "Paseo por San Nicolás de Bujaruelo",
+      "distancia_km": 3.4,
+      "desnivel_m": 55,
+      "valle": "Valle de Ordesa",
+      "dificultad": "fácil"
+    },
+    {
+      "id_ruta": "R05",
+      "ruta": "Ruta de las Ermitas de Tella",
+      "distancia_km": 2.3,
+      "desnivel_m": 80,
+      "valle": "Valle de Escuaín",
+      "dificultad": "fácil"
+    },
+    {
+      "id_ruta": "R06",
+      "ruta": "Miradores de Revilla - Angonés",
+      "distancia_km": 4.5,
+      "desnivel_m": 200,
+      "valle": "Valle de Escuaín",
+      "dificultad": "fácil"
+    },
+    {
+      "id_ruta": "R07",
+      "ruta": "Cascada del Cinca y cascadas de Lalarri",
+      "distancia_km": 7.0,
+      "desnivel_m": 500,
+      "valle": "Valle de Pineta",
+      "dificultad": "moderada"
+    },
+    {
+      "id_ruta": "R08",
+      "ruta": "Bosque de Gamueta desde el refugio de Linza",
+      "distancia_km": 7.5,
+      "desnivel_m": 415,
+      "valle": "Valles Occidentales",
+      "dificultad": "moderada"
+    },
+    {
+      "id_ruta": "R09",
+      "ruta": "Selva de Oza - Puente de Santa Ana",
+      "distancia_km": 15.0,
+      "desnivel_m": 1000,
+      "valle": "Valle de Hecho",
+      "dificultad": "difícil"
+    },
+    {
+      "id_ruta": "R10",
+      "ruta": "Camino Natural del embalse de Lanuza",
+      "distancia_km": 6.5,
+      "desnivel_m": 85,
+      "valle": "Valle de Tena",
+      "dificultad": "fácil"
+    },
+    {
+      "id_ruta": "R11",
+      "ruta": "Mirador de San Mamés",
+      "distancia_km": 0.7,
+      "desnivel_m": 37,
+      "valle": "Valle de Tena",
+      "dificultad": "fácil"
+    },
+    {
+      "id_ruta": "R12",
+      "ruta": "Cascada de El Salto",
+      "distancia_km": 2.2,
+      "desnivel_m": 84,
+      "valle": "Valle de Tena",
+      "dificultad": "fácil"
+    },
+    {
+      "id_ruta": "R13",
+      "ruta": "Formigal - Ibones de Anayet",
+      "distancia_km": 11.4,
+      "desnivel_m": 660,
+      "valle": "Valle de Tena",
+      "dificultad": "moderada"
+    },
+    {
+      "id_ruta": "R14",
+      "ruta": "Sallent de Gállego - Refugio de Respomuso",
+      "distancia_km": 11.9,
+      "desnivel_m": 995,
+      "valle": "Valle de Tena",
+      "dificultad": "difícil"
+    },
+    {
+      "id_ruta": "R15",
+      "ruta": "Balneario de Panticosa - Ibones Azules",
+      "distancia_km": 12.6,
+      "desnivel_m": 905,
+      "valle": "Valle de Tena",
+      "dificultad": "difícil"
+    },
+    {
+      "id_ruta": "R16",
+      "ruta": "Balneario de Panticosa - Picos del Infierno",
+      "distancia_km": 16.6,
+      "desnivel_m": 1597,
+      "valle": "Valle de Tena",
+      "dificultad": "muy difícil"
+    },
+    {
+      "id_ruta": "R17",
+      "ruta": "Camino de las Palizas",
+      "distancia_km": 5.0,
+      "desnivel_m": 240,
+      "valle": "Valle de Tena",
+      "dificultad": "fácil"
+    },
+    {
+      "id_ruta": "R18",
+      "ruta": "Cascada de Orós Bajo",
+      "distancia_km": 1.4,
+      "desnivel_m": 70,
+      "valle": "Valle de Tena",
+      "dificultad": "fácil"
+    },
+    {
+      "id_ruta": "R19",
+      "ruta": "Circular del Bosque de Betato",
+      "distancia_km": 4.6,
+      "desnivel_m": 221,
+      "valle": "Valle de Tena",
+      "dificultad": "fácil"
+    },
+    {
+      "id_ruta": "R20",
+      "ruta": "Ibón de Espelunciecha",
+      "distancia_km": 4.2,
+      "desnivel_m": 215,
+      "valle": "Valle de Tena",
+      "dificultad": "fácil"
+    },
+    {
+      "id_ruta": "R21",
+      "ruta": "Benasque - Cerler - Anciles",
+      "distancia_km": 9.7,
+      "desnivel_m": 454,
+      "valle": "Valle de Benasque",
+      "dificultad": "moderada"
+    },
+    {
+      "id_ruta": "R22",
+      "ruta": "Forau y cascada de Aigualluts",
+      "distancia_km": 7.0,
+      "desnivel_m": 400,
+      "valle": "Valle de Benasque",
+      "dificultad": "moderada"
+    },
+    {
+      "id_ruta": "R23",
+      "ruta": "Ibones de Villamuerta desde La Besurta",
+      "distancia_km": 2.8,
+      "desnivel_m": 185,
+      "valle": "Valle de Benasque",
+      "dificultad": "fácil"
+    },
+    {
+      "id_ruta": "R24",
+      "ruta": "Gorgas de Alba",
+      "distancia_km": 2.5,
+      "desnivel_m": 130,
+      "valle": "Valle de Benasque",
+      "dificultad": "fácil"
+    },
+    {
+      "id_ruta": "R25",
+      "ruta": "Cascada de Ardonés - Tres Cascadas de Cerler",
+      "distancia_km": 7.12,
+      "desnivel_m": 256,
+      "valle": "Valle de Benasque",
+      "dificultad": "moderada"
+    },
+    {
+      "id_ruta": "R26",
+      "ruta": "Espigantosa - Refugio Ángel Orús",
+      "distancia_km": 7.0,
+      "desnivel_m": 600,
+      "valle": "Valle de Benasque",
+      "dificultad": "difícil"
+    },
+    {
+      "id_ruta": "R27",
+      "ruta": "Ibones de Batisielles y Escarpinosa",
+      "distancia_km": 14.0,
+      "desnivel_m": 800,
+      "valle": "Valle de Benasque",
+      "dificultad": "difícil"
+    },
+    {
+      "id_ruta": "R28",
+      "ruta": "Valle de Literola - Ibonet de Literola",
+      "distancia_km": 8.8,
+      "desnivel_m": 930,
+      "valle": "Valle de Benasque",
+      "dificultad": "difícil"
+    },
+    {
+      "id_ruta": "R29",
+      "ruta": "Sahún - Ibones de Barbarisa",
+      "distancia_km": 19.4,
+      "desnivel_m": 1545,
+      "valle": "Valle de Benasque",
+      "dificultad": "muy difícil"
+    },
+    {
+      "id_ruta": "R30",
+      "ruta": "Hospital de Benasque - Tuca de Salvaguardia",
+      "distancia_km": 11.0,
+      "desnivel_m": 1000,
+      "valle": "Valle de Benasque",
+      "dificultad": "difícil"
+    },
+    {
+      "id_ruta": "R31",
+      "ruta": "Maladeta Oriental y Pico Abadías",
+      "distancia_km": 12.5,
+      "desnivel_m": 960,
+      "valle": "Valle de Benasque",
+      "dificultad": "muy difícil"
+    },
+    {
+      "id_ruta": "R32",
+      "ruta": "Vallibierna y Tuca de Culebras por Llauset",
+      "distancia_km": 12.0,
+      "desnivel_m": 900,
+      "valle": "Valle de Barrabés",
+      "dificultad": "muy difícil"
+    },
+    {
+      "id_ruta": "R33",
+      "ruta": "Aneto desde La Besurta por Portillón Superior",
+      "distancia_km": 14.8,
+      "desnivel_m": 1515,
+      "valle": "Valle de Benasque",
+      "dificultad": "muy difícil"
+    },
+    {
+      "id_ruta": "R34",
+      "ruta": "La Besurta - Refugio de La Renclusa",
+      "distancia_km": 3.5,
+      "desnivel_m": 235,
+      "valle": "Valle de Benasque",
+      "dificultad": "fácil"
+    },
+    {
+      "id_ruta": "R35",
+      "ruta": "La Besurta - Portillón de Benasque",
+      "distancia_km": 7.5,
+      "desnivel_m": 560,
+      "valle": "Valle de Benasque",
+      "dificultad": "moderada"
+    },
+    {
+      "id_ruta": "R36",
+      "ruta": "La Besurta - Tuca de Mulleres",
+      "distancia_km": 18.5,
+      "desnivel_m": 1170,
+      "valle": "Valle de Benasque",
+      "dificultad": "muy difícil"
+    },
+    {
+      "id_ruta": "R37",
+      "ruta": "La Besurta - Tuca de Paderna",
+      "distancia_km": 9.0,
+      "desnivel_m": 800,
+      "valle": "Valle de Benasque",
+      "dificultad": "difícil"
+    },
+    {
+      "id_ruta": "R38",
+      "ruta": "Posets por el refugio Ángel Orús",
+      "distancia_km": 16.0,
+      "desnivel_m": 1875,
+      "valle": "Valle de Benasque",
+      "dificultad": "muy difícil"
+    },
+    {
+      "id_ruta": "R39",
+      "ruta": "Posets por la cresta de Espadas",
+      "distancia_km": 17.5,
+      "desnivel_m": 2050,
+      "valle": "Valle de Benasque",
+      "dificultad": "muy difícil"
+    },
+    {
+      "id_ruta": "R40",
+      "ruta": "Ruta circular al Refugio de Estós e Ibonet de Batisielles",
+      "distancia_km": 18.4,
+      "desnivel_m": 1063,
+      "valle": "Valle de Benasque",
+      "dificultad": "difícil"
+    },
+    {
+      "id_ruta": "R41",
+      "ruta": "Jasa - Aísa",
+      "distancia_km": 5.7,
+      "desnivel_m": 310,
+      "valle": "Valle de Aragón / Valles Occidentales",
+      "dificultad": "moderada"
+    },
+    {
+      "id_ruta": "R42",
+      "ruta": "Lizara - Ibón de Estanés",
+      "distancia_km": 17.2,
+      "desnivel_m": 970,
+      "valle": "Valle de Aragüés / Valle de los Sarrios",
+      "dificultad": "difícil"
+    }
+  ],
+  "planes": [
+    {
+      "id_plan": "P01",
+      "id_ruta": "R01",
+      "fecha_inicio": "2026-10-18",
+      "fecha_fin": "2026-10-19",
+      "estado": "planificado"
+    },
+    {
+      "id_plan": "P02",
+      "id_ruta": "R34",
+      "fecha_inicio": "2026-11-07",
+      "fecha_fin": "2026-11-09",
+      "estado": "planificado"
+    },
+    {
+      "id_plan": "P03",
+      "id_ruta": "R22",
+      "fecha_inicio": "2026-07-12",
+      "fecha_fin": "2026-07-12",
+      "estado": "realizado"
+    },
+    {
+      "id_plan": "P05",
+      "id_ruta": "R05",
+      "fecha_inicio": "2026-08-23",
+      "fecha_fin": "2026-08-24",
+      "estado": "realizado"
+    },
+    {
+      "id_plan": "P06",
+      "id_ruta": "R37",
+      "fecha_inicio": "2026-10-31",
+      "fecha_fin": "2026-11-01",
+      "estado": "planificado"
+    },
+    {
+      "id_plan": "P07",
+      "id_ruta": "R25",
+      "fecha_inicio": "2026-09-06",
+      "fecha_fin": "2026-09-06",
+      "estado": "realizado"
+    },
+    {
+      "id_plan": "P09",
+      "id_ruta": "R09",
+      "fecha_inicio": "2026-11-28",
+      "fecha_fin": "2026-11-30",
+      "estado": "planificado"
+    },
+    {
+      "id_plan": "P10",
+      "id_ruta": "R25",
+      "fecha_inicio": "2026-12-12",
+      "fecha_fin": "2026-12-14",
+      "estado": "planificado"
+    }
+  ]
+}
