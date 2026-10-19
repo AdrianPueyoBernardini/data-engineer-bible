@@ -1,0 +1,72 @@
+[
+    {
+        "id_plan": "P01",
+        "id_ruta": "R01",
+        "fecha_inicio": "2026-10-18",
+        "fecha_fin": "2026-10-19",
+        "estado": "planificado"
+    },
+    {
+        "id_plan": "P02",
+        "id_ruta": "R34",
+        "fecha_inicio": "2026-11-07",
+        "fecha_fin": "2026-11-09",
+        "estado": "planificado"
+    },
+    {
+        "id_plan": "P03",
+        "id_ruta": "R22",
+        "fecha_inicio": "2026-07-12",
+        "fecha_fin": "2026-07-12",
+        "estado": "realizado"
+    },
+    {
+        "id_plan": "P04",
+        "id_ruta": "R14",
+        "fecha_inicio": "2026-11-22",
+        "fecha_fin": "2026-11-19",
+        "estado": "planificado"
+    },
+    {
+        "id_plan": "P05",
+        "id_ruta": "R05",
+        "fecha_inicio": "2026-08-23",
+        "fecha_fin": "2026-08-24",
+        "estado": "realizado"
+    },
+    {
+        "id_plan": "P06",
+        "id_ruta": "R37",
+        "fecha_inicio": "2026-10-31",
+        "fecha_fin": "2026-11-01",
+        "estado": "planificado"
+    },
+    {
+        "id_plan": "P07",
+        "id_ruta": "R25",
+        "fecha_inicio": "2026-09-06",
+        "fecha_fin": "2026-09-06",
+        "estado": "realizado"
+    },
+    {
+        "id_plan": "P08",
+        "id_ruta": "R19",
+        "fecha_inicio": "2026-02-30",
+        "fecha_fin": "2026-03-02",
+        "estado": "planificado"
+    },
+    {
+        "id_plan": "P09",
+        "id_ruta": "R09",
+        "fecha_inicio": "2026-11-28",
+        "fecha_fin": "2026-11-30",
+        "estado": "planificado"
+    },
+    {
+        "id_plan": "P10",
+        "id_ruta": "R25",
+        "fecha_inicio": "2026-12-12",
+        "fecha_fin": "2026-12-14",
+        "estado": "planificado"
+    }
+]
