@@ -1,0 +1,6 @@
+[postgres]
+host = localhost
+port = 5433
+dbname = p3_lab
+user = postgres
+password = cambia_esta_contraseña

@@ -1,0 +1,19 @@
+# Entorno local
+config.ini
+.env
+.venv/
+.venv
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Herramientas de test
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# IDE y sistema
+.vscode/
+.DS_Store
