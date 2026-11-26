@@ -4,20 +4,67 @@
 # ----------------------DATOS/INFO-----------------------------------
 # SQLite SI es embebido
 
+#importamos la librería nativa sqlite3
 import sqlite3
 from pathlib import Path
 
+# Ruta del archivo que almacenará la bbdd
 ruta = Path(__file__).with_name("laboratorio.sqlite3")
 
-# Abrimos conexión a la base de datos
-with psycopg.connect(
+# PASO 1: abrir la conexión
+conexion = sqlite3.connect(ruta)
 
-    host="localhost",      #Marcamos localhost
-    dbname="postgres",     #Nombre de nuestra base de datos (NO TABLA)
-    user="postgres",       #Nombre del usuario que conecta a la bbdd
-    password="postgres"    #Contraseña de acceso
-) as conn:
-    with conn.cursor() as cursor:
-        cursor.execute("SELECT 1 + 1")
-        resultado = cursor.fetchone()
-        print(resultado)
+try:
+
+# PASO 2: creamos la tabla
+    conexion.execute("""
+        CREATE TABLE IF NOT EXISTS salas_prueba (
+            id INTEGER PRIMARY KEY,
+            nombre VARCHAR(30) NOT NULL
+        )
+    """)
+
+# PASO 3: Insertar los datos a la tabla
+    conexion.execute("""
+        INSERT INTO salas_prueba (id, nombre)
+        VALUES (22, 'Salas de clases')
+    """)
+
+# PASO 4: Insertar los datos a la tabla
+    print("Cambios comiteados")
+    conexion.commit()
+
+finally:
+# PASO 5: Cerramos la conexión
+    conexion.close()
+    print("Primer conexión cerrada")
+
+# PASO 6: Abrimos de nuevo la conexión (la hemos cerrado)
+conexion = sqlite3.connect(ruta)
+
+# PASO 7: hacemos SELECT
+try:
+    select = conexion.execute("""
+        SELECT * 
+        FROM salas_prueba
+    """).fetchone()
+
+    print(select)
+
+finally:
+    conexion.close()
+
+# -----------------------------NUEVO SELECT DE PRÁCTICA------------------
+
+conexion = sqlite3.connect(ruta)
+
+try:
+    select2 = conexion.execute("""
+        SELECT nombre
+        FROM salas_prueba
+        WHERE id > 10
+    """).fetchone()
+
+    print(select2)
+finally:
+    conexion.close
