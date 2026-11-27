@@ -1,6 +1,7 @@
 # ----------------------INSTALACION-----------------------------------
 # Primero instalaremos sqlalquemy para la practica, dotenv y psycopg, todo en terminal:
 # python -m pip install "psycopg[binary]" "sqlalchemy>=2.0,<3" python-dotenv
+# python -m pip install "psycopg[pool]"
 # ----------------------DATOS/INFO-----------------------------------
 # POSTGRESQL NO es embebido
 
